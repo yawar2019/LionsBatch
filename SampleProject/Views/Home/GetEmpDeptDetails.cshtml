@@ -1,0 +1,40 @@
+﻿@model SampleProject.Models.EmpDept
+@{
+    ViewBag.Title = "GetEmpDeptDetails";
+}
+
+<h2>GetEmpDeptDetails</h2>
+
+<table>
+    <tr>
+        <th>EmpId</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+
+    @foreach (var item in Model.emp)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.EmpName</td>
+            <td>@item.EmpSalary</td>
+        </tr>
+    }
+
+</table>
+<br />
+<table>
+    <tr>
+        <th>DId</th>
+        <th>DName</th>
+    </tr>
+
+    @foreach (var item in Model.dept)
+    {
+        <tr>
+            <td>@item.Did</td>
+            <td>@item.Dname</td>
+        </tr>
+    }
+
+</table>

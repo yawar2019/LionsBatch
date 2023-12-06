@@ -99,6 +99,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DeptModel.cs" />
+    <Compile Include="Models\EmpDept.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -115,6 +117,7 @@
     <Content Include="Views\Home\SendMultipleEmpDetailToView.cshtml" />
     <Content Include="Views\Home\SendEmpDetailToViewByModel.cshtml" />
     <Content Include="Views\Home\SendMultipleEmpDetailToViewModel.cshtml" />
+    <Content Include="Views\Home\GetEmpDeptDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
