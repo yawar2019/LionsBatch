@@ -64,5 +64,81 @@ namespace SampleProject.Controllers
             return View();
         }
 
+        public ActionResult SendMultipleEmpDetailToView()
+        {
+            EmployeeModel employee1 = new EmployeeModel();
+            employee1.EmpName = "Hari";
+            employee1.Id = 1211;
+            employee1.EmpSalary = 900000;
+
+            EmployeeModel employee2 = new EmployeeModel();
+            employee2.EmpName = "pari";
+            employee2.Id = 1212;
+            employee2.EmpSalary = 800000;
+
+            EmployeeModel employee3 = new EmployeeModel();
+            employee3.EmpName = "Dhari";
+            employee3.Id = 1213;
+            employee3.EmpSalary = 700000;
+
+
+
+
+
+            List<EmployeeModel> listemp = new List<EmployeeModel>();
+            listemp.Add(employee1);
+            listemp.Add(employee2);
+            listemp.Add(employee3);
+
+            ViewBag.listEmp = listemp;
+
+            return View();
+        }
+
+
+        public ActionResult SendEmpDetailToViewByModel()
+        {
+            EmployeeModel employee = new EmployeeModel();
+            employee.EmpName = "Hari";
+            employee.Id = 1211;
+            employee.EmpSalary = 900000;
+
+           
+
+            return View(employee);
+        }
+
+        public ActionResult SendMultipleEmpDetailToViewModel()
+        {
+            EmployeeModel employee1 = new EmployeeModel();
+            employee1.EmpName = "Hari";
+            employee1.Id = 1211;
+            employee1.EmpSalary = 900000;
+
+            EmployeeModel employee2 = new EmployeeModel();
+            employee2.EmpName = "pari";
+            employee2.Id = 1212;
+            employee2.EmpSalary = 800000;
+
+            EmployeeModel employee3 = new EmployeeModel();
+            employee3.EmpName = "Dhari";
+            employee3.Id = 1213;
+            employee3.EmpSalary = 700000;
+
+
+
+
+
+            List<EmployeeModel> listemp = new List<EmployeeModel>();
+            listemp.Add(employee1);
+            listemp.Add(employee2);
+            listemp.Add(employee3);
+
+            
+            return View(listemp);
+        }
+
     }
 }
+
+//employee detail and Department detail using same viewbag

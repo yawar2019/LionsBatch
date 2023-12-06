@@ -112,6 +112,9 @@
     <Content Include="Views\Home\GetView.cshtml" />
     <Content Include="Views\Home\SendNameToView.cshtml" />
     <Content Include="Views\Home\SendEmpDetailToView.cshtml" />
+    <Content Include="Views\Home\SendMultipleEmpDetailToView.cshtml" />
+    <Content Include="Views\Home\SendEmpDetailToViewByModel.cshtml" />
+    <Content Include="Views\Home\SendMultipleEmpDetailToViewModel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

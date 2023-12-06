@@ -1,0 +1,23 @@
+﻿@model List<SampleProject.Models.EmployeeModel>
+@{
+    ViewBag.Title = "SendMultipleEmpDetailToViewModel";
+}
+
+<h2>SendMultipleEmpDetailToViewModel</h2>
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.EmpName</td>
+            <td>@item.EmpSalary</td>
+        </tr>
+    }
+</table>

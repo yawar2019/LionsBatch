@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "SendMultipleEmpDetailToView";
+}
+
+<h2>SendMultipleEmpDetailToView</h2>
+
+
+<table style="border:1px solid">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+
+
+
+
+    @foreach (var item in ViewBag.listEmp)
+    {
+        <tr>
+            <td> @item.Id       </td>
+            <td> @item.EmpName  </td>
+            <td> @item.EmpSalary</td>
+        </tr>
+    }
+
+</table>
