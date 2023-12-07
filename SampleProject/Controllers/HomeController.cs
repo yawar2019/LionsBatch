@@ -203,4 +203,4 @@ namespace SampleProject.Controllers
     }
 }
 
-//employee detail and Department detail using same viewbag
+//employee detail and Department detail using same ViewModel
