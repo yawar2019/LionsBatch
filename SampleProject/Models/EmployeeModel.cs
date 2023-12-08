@@ -7,8 +7,8 @@ namespace SampleProject.Models
 {
     public class EmployeeModel
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public string EmpName { get; set; }
-        public int EmpSalary { get; set; }
+        public int? EmpSalary { get; set; }
     }
 }

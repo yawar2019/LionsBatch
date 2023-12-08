@@ -1,6 +1,7 @@
 ﻿using SampleProject.Models;
 using System;
 using System.Collections.Generic;
+using System.EnterpriseServices;
 using System.Linq;
 using System.Web;
 using System.Web.Helpers;
@@ -140,7 +141,7 @@ namespace SampleProject.Controllers
         }
 
 
-        public ViewResult GetEmpDeptDetails()
+        public ViewResult GetEmpDeptDetails(EmployeeModel emp) //string eid,string ename
         {
             EmployeeModel employee1 = new EmployeeModel();
             employee1.EmpName = "Hari";
@@ -197,10 +198,44 @@ namespace SampleProject.Controllers
         public RedirectToRouteResult gotoOtherLocation()
         {
 
-            return RedirectToAction("GetEmpDeptDetails");
+            return RedirectToAction("GetEmpDeptDetails", "Home", new {eid=1211,ename="Piyush"});
+        }
+        public RedirectToRouteResult gotoOtherLocation2()
+        {
+            EmployeeModel emp = new EmployeeModel();
+            emp.Id = 11;
+            emp.EmpName = "HelloWorld";
+            emp.EmpSalary = 1120;
+
+            return RedirectToAction("GetEmpDeptDetails", "Home", emp);
         }
 
+        public RedirectToRouteResult gotoOtherLocation3()
+        {
+
+            return RedirectToRoute("MyAboutUsPage");
+        }
+
+        public  PartialViewResult getMePartialView()
+        {
+            EmployeeModel _reactBatch = new EmployeeModel();
+            _reactBatch.EmpName = "Umair";
+
+
+            EmployeeModel _reactBatch1 = new EmployeeModel();
+            _reactBatch1.EmpName = "Prasad";
+
+            List<EmployeeModel> listemp = new List<EmployeeModel>();
+            listemp.Add(_reactBatch);
+            listemp.Add(_reactBatch1);
+            return PartialView("_ReactStudentsView", listemp);
+        }
     }
 }
 
 //employee detail and Department detail using same ViewModel
+
+//Viewresult-which is used to render view page and pass data to view as model
+//RedirectResult- redirect from one page to another it just ask for url
+//RedirectToRouteResult-RedirectToAction which ask for action method ,controller and parameters
+                        //Just use for junping from one action method another method

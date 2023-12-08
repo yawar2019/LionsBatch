@@ -1,0 +1,34 @@
+﻿
+@model List<SampleProject.Models.EmployeeModel>
+@{
+    ViewBag.Title = "getMePartialView";
+}
+
+<h2>Students for Angular</h2>
+<br />
+<ul>
+    <li>Chauhan</li>
+    <li>Piyush</li>
+    <li>Harsha</li>
+</ul>
+<h2> Students For React</h2>
+<br />
+@{
+    var s = Html.Partial("_ReactStudentsView", Model);
+
+    int a = 19;
+    if (a > 10)
+    {
+        @s;
+    }
+}
+
+@{
+    Html.RenderPartial("_ReactStudentsView", Model);
+}
+
+
+
+<br />
+
+

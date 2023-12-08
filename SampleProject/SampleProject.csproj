@@ -118,6 +118,8 @@
     <Content Include="Views\Home\SendEmpDetailToViewByModel.cshtml" />
     <Content Include="Views\Home\SendMultipleEmpDetailToViewModel.cshtml" />
     <Content Include="Views\Home\GetEmpDeptDetails.cshtml" />
+    <Content Include="Views\Home\getMePartialView.cshtml" />
+    <Content Include="Views\Shared\_ReactStudentsView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
