@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+<form action="~/ActionForm/GetInfo" method="post">
+
+    <input type="text" name="EmpName" value="asdf" /><br />
+
+    <input type="submit" name="name" value="Submit" />
+
+</form>
+
+<span>EmpName is :</span>@ViewBag.EmpName

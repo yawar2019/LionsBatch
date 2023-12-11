@@ -95,6 +95,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutUsController.cs" />
+    <Compile Include="Controllers\ActionFormController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -120,6 +121,8 @@
     <Content Include="Views\Home\GetEmpDeptDetails.cshtml" />
     <Content Include="Views\Home\getMePartialView.cshtml" />
     <Content Include="Views\Shared\_ReactStudentsView.cshtml" />
+    <Content Include="TestPDF.pdf" />
+    <Content Include="Views\ActionForm\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

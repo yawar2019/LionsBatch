@@ -12,6 +12,7 @@ namespace SampleProject.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+        //[NonAction]
         public int Index()
         {
             int a = 10, b = 20;
@@ -229,6 +230,73 @@ namespace SampleProject.Controllers
             listemp.Add(_reactBatch);
             listemp.Add(_reactBatch1);
             return PartialView("_ReactStudentsView", listemp);
+        }
+
+
+        public JsonResult ViewJsonData()
+        {
+            EmployeeModel employee1 = new EmployeeModel();
+            employee1.EmpName = "Hari";
+            employee1.Id = 1211;
+            employee1.EmpSalary = 900000;
+
+            EmployeeModel employee2 = new EmployeeModel();
+            employee2.EmpName = "pari";
+            employee2.Id = 1212;
+            employee2.EmpSalary = 800000;
+
+            EmployeeModel employee3 = new EmployeeModel();
+            employee3.EmpName = "Dhari";
+            employee3.Id = 1213;
+            employee3.EmpSalary = 700000;
+
+
+            List<EmployeeModel> listemp = new List<EmployeeModel>();
+            listemp.Add(employee1);
+            listemp.Add(employee2);
+            listemp.Add(employee3);
+
+
+
+            return Json(listemp, JsonRequestBehavior.AllowGet);
+
+        }
+
+        public  FileResult OpenFile()
+        {
+
+            return File("~/Web.config","text");
+        }
+
+        public FileResult OpenFile2()
+        {
+
+            return File("~/TestPDF.pdf", "application/pdf");
+        }
+
+        public FileResult DownloadFile()
+        {
+
+            return File("~/TestPDF.pdf", "application/pdf", "TestPDF.pdf");
+        }
+
+        public ContentResult Getcontent(int? id)
+        {
+            if (id == 1)
+            {
+
+                return Content("hai hello");
+            }
+            else if (id == 2)
+            {
+                return Content("<p style='color:red'>Good Morning</p>");
+
+            }
+            else {
+            
+                return Content("<script>alert('great to see alert!')</script>");
+
+            }
         }
     }
 }
