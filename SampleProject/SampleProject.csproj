@@ -103,6 +103,8 @@
     <Compile Include="Models\DeptModel.cs" />
     <Compile Include="Models\EmpDept.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\StudentDataModel.cs" />
+    <Compile Include="Models\StudentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +125,7 @@
     <Content Include="Views\Shared\_ReactStudentsView.cshtml" />
     <Content Include="TestPDF.pdf" />
     <Content Include="Views\ActionForm\Index.cshtml" />
+    <Content Include="Views\ActionForm\ShowStudentDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

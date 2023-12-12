@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SampleProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,12 @@ namespace SampleProject.Controllers
         {
             ViewBag.EmpName = "Mr. "+EmpName;
             return View("Index");
+        }
+
+        public ActionResult ShowStudentDetails()
+        {
+            StudentModel st = new StudentModel();
+            return View(st.ShowStudentData());
         }
     }
 }
