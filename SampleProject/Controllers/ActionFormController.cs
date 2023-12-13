@@ -20,11 +20,30 @@ namespace SampleProject.Controllers
             ViewBag.EmpName = "Mr. "+EmpName;
             return View("Index");
         }
-
+        StudentModel st = new StudentModel();
         public ActionResult ShowStudentDetails()
         {
-            StudentModel st = new StudentModel();
-            return View(st.ShowStudentData());
+            
+            var stdet = st.ShowStudentData();
+            return View(stdet);
+        }
+
+        
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(StudentDataModel stud)
+        {
+            var result = st.SaveStudentData(stud);
+            if(result>0)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View();
         }
     }
 }

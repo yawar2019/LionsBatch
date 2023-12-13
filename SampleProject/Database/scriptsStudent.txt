@@ -1,0 +1,23 @@
+﻿CREATE PROCEDURE sp_SaveStudentRecord(
+@StudentName varchar(50),
+@Fees decimal(18,2)
+)
+As
+BEGIN
+INSERT INTO Students(Sname,Fees) values(@StudentName,@Fees)
+END
+
+
+
+USE [StudentDb]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_getStudentDetails]    Script Date: 12/13/2023 10:06:44 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER Procedure [dbo].[sp_getStudentDetails]
+As
+BEGIN
+SELECT Sid,Sname,Fees from Students
+END

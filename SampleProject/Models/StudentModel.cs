@@ -44,6 +44,21 @@ namespace SampleProject.Models
 
         }
         //add the data
+
+        public int SaveStudentData(StudentDataModel st)
+        {
+            SqlCommand cmd = new SqlCommand("sp_SaveStudentRecord", con); //jump to storeproc
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+
+            cmd.Parameters.AddWithValue("@StudentName", st.Sname);// passing value to storeproc
+            cmd.Parameters.AddWithValue("@Fees", st.Fees);
+
+            int result = cmd.ExecuteNonQuery();//Final step execute
+            con.Close();
+           return result;
+
+        }
         //update the data
         //delete the data
 
