@@ -1,0 +1,19 @@
+﻿@model SampleProject.Models.StudentDataModel
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+ 
+
+<form action="~/ActionForm/Edit" method="post">
+    <input type="hidden" name="Sid" value="@Model.Sid" />
+    <label>Student Name</label>
+    <input type="text" name="Sname" value="@Model.Sname" /><br />
+
+    <label>Fees</label>
+    <input type="number" name="Fees" value="@Model.Fees" /><br /><br />
+
+    <input type="submit" value="Save" />
+
+</form>

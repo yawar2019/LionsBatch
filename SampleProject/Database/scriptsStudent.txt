@@ -16,8 +16,37 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+
+Get All Students Record
 ALTER Procedure [dbo].[sp_getStudentDetails]
 As
 BEGIN
 SELECT Sid,Sname,Fees from Students
+END
+//get by id
+ALTER Procedure [dbo].[sp_getStudentDetailById]
+@Sid int
+AS
+BEGIN
+SELECT Sid,Sname,Fees from Students where sid=@Sid
+END
+
+//update
+ALTER Procedure [dbo].[sp_updateStudentDetailById]
+@Sid int,
+@Sname varchar(50),
+@Fees decimal(18,2)
+AS
+BEGIN
+Update Students set Sname=@Sname,Fees=@Fees   where sid=@Sid
+END
+
+//Delete
+
+ALTER Procedure [dbo].[sp_deleteStudentDetailById]
+@Sid int
+ 
+AS
+BEGIN
+DELETE Students   where sid=@Sid
 END

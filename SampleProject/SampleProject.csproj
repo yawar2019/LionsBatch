@@ -222,6 +222,8 @@
     <Content Include="Views\ActionForm\Index.cshtml" />
     <Content Include="Views\ActionForm\ShowStudentDetails.cshtml" />
     <Content Include="Views\ActionForm\Create.cshtml" />
+    <Content Include="Views\ActionForm\Edit.cshtml" />
+    <Content Include="Views\ActionForm\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

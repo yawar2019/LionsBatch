@@ -45,5 +45,45 @@ namespace SampleProject.Controllers
 
             return View();
         }
+
+
+        public ActionResult Edit(int? id)
+        {
+           StudentDataModel studentData= st.GetStudentDetail(id);
+            return View(studentData);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(StudentDataModel stud)
+        {
+            var result = st.EditStudentData(stud);
+            if (result > 0)
+            {
+                return RedirectToAction("ShowStudentDetails");
+            }
+
+            return View();
+        }
+
+
+        public ActionResult Delete(int? id)
+        {
+            StudentDataModel studentData = st.GetStudentDetail(id);
+            return View(studentData);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int? id)
+        {
+            var result = st.DeleteStudentData(id);
+            if (result > 0)
+            {
+                return RedirectToAction("ShowStudentDetails");
+            }
+
+            return View();
+        }
+
     }
 }

@@ -1,0 +1,22 @@
+﻿@model SampleProject.Models.StudentDataModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h2>Are you Sure you want to Delete Record?</h2>
+<br />
+<span>Sid:</span>@Model.Sid
+<br />
+<span>Sname:</span>@Model.Sname
+<br />
+<span>Fees:</span>@Model.Fees
+<br />
+
+
+
+<form action="~/ActionForm/Delete/@Model.Sid" method="post">
+    <input type="submit" name="name" value="DELETE" />
+</form>
