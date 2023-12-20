@@ -105,6 +105,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312181650076_InitialCreate.cs" />
+    <Compile Include="Migrations\202312181650076_InitialCreate.designer.cs">
+      <DependentUpon>202312181650076_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312201634548_Initial.cs" />
+    <Compile Include="Migrations\202312201634548_Initial.designer.cs">
+      <DependentUpon>202312201634548_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EmployeeContext.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,6 +124,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\EmployeeDetails\Index.cshtml" />
+    <Content Include="Views\EmployeeDetails\Create.cshtml" />
+    <Content Include="Views\EmployeeDetails\Edit.cshtml" />
+    <Content Include="Views\EmployeeDetails\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -124,6 +136,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202312181650076_InitialCreate.resx">
+      <DependentUpon>202312181650076_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312201634548_Initial.resx">
+      <DependentUpon>202312201634548_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
