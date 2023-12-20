@@ -5,22 +5,13 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace SampleProject
+namespace DatabaseFirstApproach
 {
     public class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            routes.MapMvcAttributeRoutes();
-            
-            routes.MapRoute(
-              name: "xyz",
-              url: "MVC/Students/{Toys}",
-              defaults: new { controller = "AboutUS", action = "Index" }
-            );
-
 
             routes.MapRoute(
                 name: "Default",

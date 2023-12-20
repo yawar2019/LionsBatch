@@ -13,6 +13,9 @@ namespace SampleProject.Controllers
     {
         // GET: Home
         //[NonAction]
+        [Route("Toys/Boys")]
+        [Route("Toys/Guns")]
+        [Route("Home/Index")]  
         public int Index()
         {
             int a = 10, b = 20;
