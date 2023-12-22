@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirstApproach", "Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFirstApproach\CodeFirstApproach.csproj", "{0B40401E-7678-484E-990D-484EF3E29114}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperExample", "DapperExample\DapperExample.csproj", "{99E39501-8B7F-4682-943B-D117EBC3C7C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0B40401E-7678-484E-990D-484EF3E29114}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B40401E-7678-484E-990D-484EF3E29114}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B40401E-7678-484E-990D-484EF3E29114}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99E39501-8B7F-4682-943B-D117EBC3C7C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E39501-8B7F-4682-943B-D117EBC3C7C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E39501-8B7F-4682-943B-D117EBC3C7C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E39501-8B7F-4682-943B-D117EBC3C7C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
