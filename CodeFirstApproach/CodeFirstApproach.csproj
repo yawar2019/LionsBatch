@@ -113,7 +113,21 @@
     <Compile Include="Migrations\202312201634548_Initial.designer.cs">
       <DependentUpon>202312201634548_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312211542332_AddedDepartment.cs" />
+    <Compile Include="Migrations\202312211542332_AddedDepartment.designer.cs">
+      <DependentUpon>202312211542332_AddedDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312211546403_AddedTableDepart.cs" />
+    <Compile Include="Migrations\202312211546403_AddedTableDepart.designer.cs">
+      <DependentUpon>202312211546403_AddedTableDepart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312211549163_AddedTableDepart2.cs" />
+    <Compile Include="Migrations\202312211549163_AddedTableDepart2.designer.cs">
+      <DependentUpon>202312211549163_AddedTableDepart2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\DepartmentModel.cs" />
+    <Compile Include="Models\EmpAndDept.cs" />
     <Compile Include="Models\EmployeeContext.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -143,6 +157,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312201634548_Initial.resx">
       <DependentUpon>202312201634548_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312211542332_AddedDepartment.resx">
+      <DependentUpon>202312211542332_AddedDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312211546403_AddedTableDepart.resx">
+      <DependentUpon>202312211546403_AddedTableDepart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312211549163_AddedTableDepart2.resx">
+      <DependentUpon>202312211549163_AddedTableDepart2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

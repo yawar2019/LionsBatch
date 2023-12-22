@@ -14,7 +14,20 @@ namespace CodeFirstApproach.Controllers
         EmployeeContext db = new EmployeeContext();
         public ActionResult Index()
         {
-            return View(db.EmployeeModels.ToList());
+            var empdept=(from e in db.EmployeeModels
+                         join d in db.DepartmentModels
+                         on e.DeptId equals d.DeptId
+                         select new EmpAndDept
+                         {
+                             EmpId=e.EmpId,
+                             EmpName=e.EmpName,
+                             EmpSalary=e.EmpSalary,
+                             Designation = e.Designation,
+                             DeptName=d.DeptName
+
+                         } ).ToList();
+                         
+            return View(empdept);
         }
 
         public ActionResult Create()

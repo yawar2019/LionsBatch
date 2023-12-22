@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CodeFirstApproach.Models.EmployeeModel>
+﻿@model IEnumerable<CodeFirstApproach.Models.EmpAndDept>
 
 @{
     ViewBag.Title = "Index";
@@ -17,6 +17,12 @@
         <th>
             @Html.DisplayNameFor(model => model.EmpSalary)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Designation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeptName)
+        </th>
         <th></th>
     </tr>
 
@@ -29,9 +35,15 @@
             @Html.DisplayFor(modelItem => item.EmpSalary)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EmpId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EmpId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.EmpId })
+            @Html.DisplayFor(modelItem => item.Designation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeptName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.EmpId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.EmpId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.EmpId })
         </td>
     </tr>
 }
