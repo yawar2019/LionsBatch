@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "HtmlHelperExample";
+}
+
+<script>
+    function funCar() {
+        alert("Porsche gl30");
+    }
+</script>
+
+<h2>HtmlHelperExample</h2>
+
+<input type="text" name="name" value="" style="color:red" />
+
+@Html.TextBox("FirstName",null,new { style = "color:red;", placeholder = "Enter Text Here",@class="form-control", onclick = "funCar()" })
+
+
+
+@section Section1
+{
+    Today is Lovely day but i cant see.
+}
+
+
+@*//if you want to create HtmlControls with C# Methods then you can use HtmlHelper
+
+//two Different type of Html Helper
+//1) loosly type ex:TextBox,Checkbox 2) strongly type ex:TextBoxFor,CheckBoxFor
+//string name property :intialize id="FirstName",name="FirstName" type="text"*@

@@ -85,5 +85,10 @@ namespace SampleProject.Controllers
             return View();
         }
 
+        public ActionResult HtmlHelperExample()
+        {
+            return View();
+        }
+
     }
 }
