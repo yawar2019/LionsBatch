@@ -13,7 +13,26 @@
 
 <input type="text" name="name" value="" style="color:red" />
 
-@Html.TextBox("FirstName",null,new { style = "color:red;", placeholder = "Enter Text Here",@class="form-control", onclick = "funCar()" })
+@Html.TextBox("FirstName", null, new { style = "color:red;", placeholder = "Enter Text Here", @class = "form-control", onclick = "funCar()" })
+<br />
+@Html.Password("Pwd", "xyz")
+<br />
+<span>Java</span>@Html.CheckBox("java", false)
+<span>DotNet</span>@Html.CheckBox("Dotnet", true)
+<br />
+<span>Male</span>@Html.RadioButton("Gender", "Male")
+<span>FeMale</span>@Html.RadioButton("Gender", "FeMale")<br />
+
+@Html.DropDownList("Country",new List<SelectListItem>()
+{
+    new SelectListItem{Text="India",Value="1"},
+    new SelectListItem{Text="China",Value="2",Selected=true},
+    new SelectListItem{Text="America",Value="3"}
+
+},"Select Country", new {@class="form-control"})
+
+
+@Html.DropDownList("Students")
 
 
 
@@ -25,6 +44,6 @@
 
 @*//if you want to create HtmlControls with C# Methods then you can use HtmlHelper
 
-//two Different type of Html Helper
-//1) loosly type ex:TextBox,Checkbox 2) strongly type ex:TextBoxFor,CheckBoxFor
-//string name property :intialize id="FirstName",name="FirstName" type="text"*@
+    //two Different type of Html Helper
+    //1) loosly type ex:TextBox,Checkbox 2) strongly type ex:TextBoxFor,CheckBoxFor
+    //string name property :intialize id="FirstName",name="FirstName" type="text"*@

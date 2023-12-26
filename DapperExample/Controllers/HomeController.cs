@@ -19,6 +19,8 @@ namespace DapperExample.Controllers
         {
             //var result = con.Query<EmployeeModel>("SELECT * from EmployeeModels");
             var result = con.Query<EmployeeModel>("sp_getEmployee",commandType:System.Data.CommandType.StoredProcedure);
+            ViewBag.Employees = new SelectList(result, "EmpId", "EmpName");
+
             return View(result);
         }
 
