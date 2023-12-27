@@ -87,9 +87,18 @@ namespace SampleProject.Controllers
 
         public ActionResult HtmlHelperExample()
         {
-            ViewBag.Students = new SelectList(st.ShowStudentData(), "Sid", "Sname");
+            //ViewBag.Students = new SelectList(st.ShowStudentData(), "Sid", "Sname");
+            return View();
+        }
+        [HttpPost]
+        public ActionResult HtmlHelper2(string FirstName,string Pwd,string java, string Dotnet,string Gender,string Country,string comments)
+        {
             return View();
         }
 
+        public ActionResult StronglyTypeHtmlHelper()
+        {
+            return View();
+        }
     }
 }

@@ -11,7 +11,9 @@
 
 <h2>HtmlHelperExample</h2>
 
-<input type="text" name="name" value="" style="color:red" />
+@*<input type="text" name="name" value="" style="color:red" />*@
+
+@using(Html.BeginForm("HtmlHelper2", "ActionForm", FormMethod.Post, new {id="Form1"})){
 
 @Html.TextBox("FirstName", null, new { style = "color:red;", placeholder = "Enter Text Here", @class = "form-control", onclick = "funCar()" })
 <br />
@@ -21,20 +23,24 @@
 <span>DotNet</span>@Html.CheckBox("Dotnet", true)
 <br />
 <span>Male</span>@Html.RadioButton("Gender", "Male")
-<span>FeMale</span>@Html.RadioButton("Gender", "FeMale")<br />
+<span>FeMale</span>@Html.RadioButton("Gender", "FeMale")
+<br />
 
-@Html.DropDownList("Country",new List<SelectListItem>()
+@Html.DropDownList("Country", new List<SelectListItem>()
 {
     new SelectListItem{Text="India",Value="1"},
     new SelectListItem{Text="China",Value="2",Selected=true},
     new SelectListItem{Text="America",Value="3"}
 
-},"Select Country", new {@class="form-control"})
+}, "Select Country", new { @class = "form-control" })<br />
 
 
-@Html.DropDownList("Students")
+@*@Html.DropDownList("Students")*@
 
+<label>Comments</label> @Html.TextArea("comments", null, 5, 10, null)<br />
 
+<input type="submit"   value="submit" class="btn btn-success"/>
+}
 
 @section Section1
 {

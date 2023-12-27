@@ -18,7 +18,7 @@ namespace DapperExample.Controllers
         public ActionResult Index()
         {
             //var result = con.Query<EmployeeModel>("SELECT * from EmployeeModels");
-            var result = con.Query<EmployeeModel>("sp_getEmployee",commandType:System.Data.CommandType.StoredProcedure);
+            var result = con.Query<EmployeeModel>("sp_getEmployee", commandType: System.Data.CommandType.StoredProcedure);
             ViewBag.Employees = new SelectList(result, "EmpId", "EmpName");
 
             return View(result);
@@ -28,21 +28,44 @@ namespace DapperExample.Controllers
         {
 
             return View();
-        
+
         }
         [HttpPost]
         public ActionResult Create(EmployeeModel emp)
         {
             DynamicParameters parameters = new DynamicParameters();
-            parameters.Add("@EmpName",emp.EmpName);
-            parameters.Add("@EmpSalary",emp.EmpSalary);
+            parameters.Add("@EmpName", emp.EmpName);
+            parameters.Add("@EmpSalary", emp.EmpSalary);
 
-            int i = con.Execute("sp_saveEmployee",param: parameters, commandType: System.Data.CommandType.StoredProcedure);
-            if(i>0)
+            int i = con.Execute("sp_saveEmployee", param: parameters, commandType: System.Data.CommandType.StoredProcedure);
+            if (i > 0)
             {
                 return RedirectToAction("Index");
 
             }
+            return View();
+
+        }
+
+        public ActionResult StronglyTypeHtmlHelper()
+        {
+            var result = con.Query<EmployeeModel>("sp_getEmployee", commandType: System.Data.CommandType.StoredProcedure);
+            ViewBag.Employees = new SelectList(result, "EmpId", "EmpName");
+            return View();
+
+        }
+        [HttpPost]
+        public ActionResult StronglyTypeHtmlHelper(RegistrationModel registration)
+        {
+            var result = con.Query<EmployeeModel>("sp_getEmployee", commandType: System.Data.CommandType.StoredProcedure);
+            ViewBag.Employees = new SelectList(result, "EmpId", "EmpName");
+            return View();
+
+        }
+
+
+        public ActionResult StronglyTypeEditorFor()
+        {
             return View();
 
         }
