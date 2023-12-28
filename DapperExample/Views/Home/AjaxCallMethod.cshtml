@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "AjaxCallMethod";
+}
+
+<h2>AjaxCallMethod</h2>
+
+<table id="table-1">
+    <thead>
+        <tr>
+            <th>
+                studentid
+            </th>
+            <th>
+                stname
+            </th>
+            <th>
+                department
+            </th>
+        </tr>
+    </thead>
+</table>
+
+<script>
+    onload = function showdata() {
+        $.ajax({
+            url: "http://localhost:55738/Home/ShowData",
+            type: "Get",
+            datatype: "json",
+            success: function (result) {
+
+                alert(result);
+                $.each(result, function (i, key) {
+
+
+                    $("#table-1 tr:last").after('<tr><td>' + key.EmpId + '</td><td>' + key.EmpName + '</td><td>' + key.EmpSalary + '</td></tr>');
+
+                });
+
+            }
+        });
+    }
+</script>
+<script src="~/Scripts/jquery/jquery.min.js"></script>
+
+
+@*<script>
+
+    $('#Save').click(function () {
+        var url = "Hotel/Create";
+        var ItemName = $("#ItemName").val();
+        var price = $("#price").val();
+        $.post(url, { ItemName: name, price: price }, function (data) {
+            $("#msg").html(data);
+        });
+    })
+
+</script>
+}*@

@@ -100,5 +100,10 @@ namespace SampleProject.Controllers
         {
             return View();
         }
+
+        public ActionResult AjaxCallExample()
+        {
+            return View();
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace DapperExample.Models
 {
     public class RegistrationModel
     {
-
+        [Display(Name ="Employee Name")]
         public string EmpName { get; set; }
         [DataType(DataType.Time)]
         public string Password { get; set; }

@@ -214,6 +214,7 @@
     <Compile Include="Models\DeptModel.cs" />
     <Compile Include="Models\EmpDept.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\myhtmlhelper.cs" />
     <Compile Include="Models\RegistrationModel.cs" />
     <Compile Include="Models\StudentDataModel.cs" />
     <Compile Include="Models\StudentModel.cs" />
@@ -244,6 +245,7 @@
     <Content Include="Views\ActionForm\HtmlHelperExample.cshtml" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Shared\_MyLayout.cshtml" />
+    <Content Include="Views\ActionForm\AjaxCallExample.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -69,5 +69,17 @@ namespace DapperExample.Controllers
             return View();
 
         }
+
+
+        public ActionResult ShowData()
+        {
+            var result = con.Query<EmployeeModel>("sp_getEmployee", commandType: System.Data.CommandType.StoredProcedure);
+
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+        public  ActionResult AjaxCallMethod()
+        {
+            return View();
+        }
     }
 }
