@@ -12,10 +12,11 @@
 
 <h2>HtmlHelperExample</h2>
 
-@*<input type="text" name="name" value="" style="color:red" />*@
 
 @using (Html.BeginForm("HtmlHelper2", "ActionForm", FormMethod.Post, new { id = "Form1" }))
 {
+    <input type="text" name="name" value="" style="color:red" required />
+
 
     @Html.TextBox("FirstName", null, new { style = "color:red;", placeholder = "Enter Text Here", @class = "form-control", onclick = "funCar()" })
     <br />
@@ -88,25 +89,25 @@
 
 
 @*@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    <span>File</span>
-    <input type="file" id="fileupload" name="fileupload" />
-    <input type="submit" value="upload" />
-}
-@ViewBag.msg
+    {
+        <span>File</span>
+        <input type="file" id="fileupload" name="fileupload" />
+        <input type="submit" value="upload" />
+    }
+    @ViewBag.msg
 
 
-  public ActionResult Index()
-        {
-            return View();
-        }
-        [HttpPost]
-        public ActionResult Index(HttpPostedFileBase fileupload)
-        {
-            string filename = Path.GetFileName(fileupload.FileName);
-            string path = Server.MapPath("~/upload");
-            fileupload.SaveAs(Path.Combine(path, filename));
-            ViewBag.msg = "uploaded successfully";
+      public ActionResult Index()
+            {
+                return View();
+            }
+            [HttpPost]
+            public ActionResult Index(HttpPostedFileBase fileupload)
+            {
+                string filename = Path.GetFileName(fileupload.FileName);
+                string path = Server.MapPath("~/upload");
+                fileupload.SaveAs(Path.Combine(path, filename));
+                ViewBag.msg = "uploaded successfully";
 
-            return View();
-        }*@
+                return View();
+            }*@

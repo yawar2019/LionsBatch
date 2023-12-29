@@ -81,5 +81,25 @@ namespace DapperExample.Controllers
         {
             return View();
         }
+
+        public ActionResult ValidationExample()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ValidationExample(RegistrationModel registration)
+        {
+            if(!ModelState.IsValid)
+            {
+                return View(registration);
+            }
+            else
+            {
+                return View();
+
+            }
+        }
     }
 }
