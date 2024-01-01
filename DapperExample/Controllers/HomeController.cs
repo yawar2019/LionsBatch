@@ -91,12 +91,14 @@ namespace DapperExample.Controllers
         [HttpPost]
         public ActionResult ValidationExample(RegistrationModel registration)
         {
-            if(!ModelState.IsValid)
+            if(ModelState.IsValid)
             {
+                //logic sccess
                 return View(registration);
             }
             else
             {
+                //logic not success
                 return View();
 
             }

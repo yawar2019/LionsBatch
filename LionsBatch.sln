@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperExample", "DapperExample\DapperExample.csproj", "{99E39501-8B7F-4682-943B-D117EBC3C7C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{18946F39-6C1F-4672-955D-78B68B02157E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{99E39501-8B7F-4682-943B-D117EBC3C7C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99E39501-8B7F-4682-943B-D117EBC3C7C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99E39501-8B7F-4682-943B-D117EBC3C7C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18946F39-6C1F-4672-955D-78B68B02157E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18946F39-6C1F-4672-955D-78B68B02157E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18946F39-6C1F-4672-955D-78B68B02157E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18946F39-6C1F-4672-955D-78B68B02157E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
