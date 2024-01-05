@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
-
+using SampleProject.FilterExample;
 namespace SampleProject.Controllers
 {
     public class HomeController : Controller
@@ -28,7 +28,7 @@ namespace SampleProject.Controllers
 
             return "Deepak " + result;
         }
-
+        [CustomFilter]
         public string GetId(int? eid)
         {
             return "My Employee Id is " + eid;

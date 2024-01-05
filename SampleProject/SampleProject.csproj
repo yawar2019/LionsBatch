@@ -208,6 +208,7 @@
     <Compile Include="Controllers\AboutUsController.cs" />
     <Compile Include="Controllers\ActionFormController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="FilterExample\CustomFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
