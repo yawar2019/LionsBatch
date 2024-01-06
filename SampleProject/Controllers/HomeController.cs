@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using SampleProject.FilterExample;
 namespace SampleProject.Controllers
 {
+
     public class HomeController : Controller
     {
         // GET: Home
@@ -22,13 +23,21 @@ namespace SampleProject.Controllers
             int c = a + b;
             return c;
         }
-        public string GetName()
+        [CustomFilter]
+        public ActionResult GetName()
         {
             int result = Index();
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpName = "Sagar";
+            emp.Id = 1211;
+            emp.EmpSalary = 1098;
 
-            return "Deepak " + result;
+
+            ViewBag.PlayerName = "Rohit Sharma";
+
+
+            return View(emp);
         }
-        [CustomFilter]
         public string GetId(int? eid)
         {
             return "My Employee Id is " + eid;
@@ -300,6 +309,12 @@ namespace SampleProject.Controllers
                 return Content("<script>alert('great to see alert!')</script>");
 
             }
+        }
+
+        [OutputCache(Duration=10,Location =System.Web.UI.OutputCacheLocation.Client)]
+        public  ActionResult GetResult()
+        {
+            return View();
         }
     }
 }
