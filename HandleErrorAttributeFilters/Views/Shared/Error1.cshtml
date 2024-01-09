@@ -1,0 +1,19 @@
+﻿@model  HandleErrorInfo
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error 1 Page</title>
+</head>
+<body>
+    <hgroup>
+        <h1>Error 1 PAge:@Model.Exception</h1>
+        <h1>Error:@Model.ControllerName</h1>
+
+        <h1>Error:@Model.ActionName</h1>
+        <h1>Error:@Model.Exception.Message</h1>
+        <h1>Error:@Model.Exception.Source</h1>
+    </hgroup>
+</body>
+</html>

@@ -48,8 +48,10 @@ namespace SampleProject.Models
             string[] FinalRoles = (from user in users
                                   join userRolemap in UserRoleMapping
                                   on user.UserId equals userRolemap.UserId
+
                                   join role in Roles
                                   on userRolemap.RoleId equals role.RoleId
+
                                    where user.UserName==username
                                    select role.RoleName ).ToArray();
 
